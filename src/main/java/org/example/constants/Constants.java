@@ -2,11 +2,18 @@ package org.example.constants;
 
 import java.io.File;
 
-public class Constants {
-    private static final String rus = "ЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮ";
-    private static final String eng = "QWERTYUIOPLKJHGFDSAZXCVBNM";
-    private static final String cypher = "0123456789";
-    private static final String z = "!@#$%^&*()[]{}";
-    public static final String ALPHABET = rus + eng + rus.toLowerCase() + eng.toLowerCase() + cypher + z;
-    public static final String TXT_FOLDER = System.getProperty("user.dir") + File.separator + "text" + File.separator;
+public interface Constants {
+    String ENCODE = "encode";
+    String DECODE = "decode";
+    String BRUTEFORCE = "bruteforce";
+    String ANALYZE = "analyze";
+
+    String TXT_FOLDER = System.getProperty("user.dir") +
+            File.separator +
+            "text" +
+            File.separator;
+
+    String NOT_FOUND_ACTION_FORMAT = "not found action: %s";
+    String INCORRECT_FILE = "Incorrect file: ";
+    String APPLICATION_CLOSED = "application closed";
 }

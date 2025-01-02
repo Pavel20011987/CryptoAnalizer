@@ -1,20 +1,19 @@
 package org.example.entity;
 
 public class Result {
-    private final String message;
+    public final ResultCode resultCode;
+    public final String message;
 
-    private final ResultCode resultCode;
-
-
-    public Result(String message, ResultCode resultCode) {
-        this.message = message;
+    public Result(ResultCode resultCode, String message) {
         this.resultCode = resultCode;
+        this.message = message;
     }
+
     @Override
     public String toString() {
         return "Result{" +
-                "message='" + message +'\'' +
-                ", resultCode=" + resultCode +
+                "resultCode=" + resultCode +
+                ", resultFile='" + message + '\'' +
                 '}';
     }
 
